@@ -1,0 +1,4 @@
+node_modules
+test/fake-titanium-app/tiapp.xml
+test/fake-titanium-app/build
+test/fake-titanium-app/modules
