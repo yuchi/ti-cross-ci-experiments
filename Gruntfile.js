@@ -51,6 +51,23 @@ module.exports = function (grunt) {
     grunt.log.ok("Wrote tiapp.xml");
   });
 
+  grunt.registerTask('ci:ios', 'Set up CI for iOS (noop)', function () {
+    //
+  });
+
+  grunt.registerTask('ci:droid', 'Set up CI for Android (noop)', function () {
+    var done = this.async();
+
+    var setup = require('child_process').spawn('./test/set_up_android.sh');
+
+    setup.stdout.pipe(process.stdout);
+    setup.stderr.pipe(process.stderr);
+
+    setup.on('close', function (code) {
+      done(code === 0);
+    });
+  });
+
   grunt.registerTask('test:ios', [ 'tiapp', 'titanium:ios' ]);
   grunt.registerTask('test:droid', [ 'tiapp', 'titanium:droid' ]);
 

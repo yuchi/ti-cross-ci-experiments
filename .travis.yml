@@ -1,9 +1,11 @@
 language: objective-c
 env:
-  - TI_SDK=3.4.1.GA
-  - TI_SDK=3.5.0.GA
+  - TI_SDK=3.4.1.GA PLATFORM=ios
+  - TI_SDK=3.4.1.GA PLATFORM=droid
+  - TI_SDK=3.5.0.GA PLATFORM=ios
+  - TI_SDK=3.5.0.GA PLATFORM=droid
 script:
-  - grunt ios --sdk-version "$TI_SDK"
+  - grunt "ci:$PLATFORM" "$PLATFORM" --sdk-version "$TI_SDK"
 before_install:
   - npm install --global grunt-cli titanium
   - npm install
