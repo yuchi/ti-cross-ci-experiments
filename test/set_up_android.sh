@@ -12,5 +12,5 @@ echo "# Creating AVD"
 echo ""
 
 echo no | android create avd --force -n test -t android-17 --abi armeabi-v7a
-emulator -avd test -no-skin -no-audio -no-window &
-wait_for_emulator
+#emulator -avd test -no-skin -no-audio -no-window &
+#wait_for_emulator
