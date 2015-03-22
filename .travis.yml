@@ -1,7 +1,7 @@
 language: objective-c
 env:
 #  - TI_SDK=3.4.1.GA PLATFORM=ios
-  - TI_SDK=3.4.1.GA PLATFORM=droid
+#  - TI_SDK=3.4.1.GA PLATFORM=droid
 #  - TI_SDK=3.5.0.GA PLATFORM=ios
   - TI_SDK=3.5.0.GA PLATFORM=droid
 script:
